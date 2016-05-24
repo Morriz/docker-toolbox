@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#@IgnoreInspection BashAddShebang
 checkRun () {
     "$@"
     status=$?

@@ -15,7 +15,7 @@ rsync -av $source/ .tmp/docker --exclude=node_modules --exclude=build
 # docker path to run command in container
 do="docker run --rm -t -v $PWD/toolbox/node:/toolbox -v $PWD/.cache/node:/cache -v $PWD/.tmp/docker:/sources -w /app node:6"
 
-echo "Running install scripts"
+echo "Running install scripts and tests"
 $do sh /toolbox/install.sh
 
 # clean up
