@@ -1,5 +1,5 @@
-FROM node:6-slim
+FROM node:6
 RUN mkdir -p /app
 WORKDIR /app
 ADD . /app
-CMD [ "node", "build/index.js" ]
+CMD [ "npm", "start" ]

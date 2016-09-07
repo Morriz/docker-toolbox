@@ -2,7 +2,8 @@
 . toolbox/node/functions.sh
 
 source=$1
-if [[ -d "$source" ]]; then
+echo $source
+if [[ ! -d "$source" ]]; then
   echo "The folder you supplied does not exist"
   exit 1
 fi
