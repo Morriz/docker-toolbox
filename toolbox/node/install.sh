@@ -4,6 +4,9 @@
 echo "Copying sources"
 cp -r /sources/* .
 cp -r /sources/.babelrc .
+# some perm fixing on our npm cache for Docker for Mac:
+chown -R root /root/.npm
+chmod -R 777 /root/.npm
 
 echo "Doing npm install"
 NODE_ENV=development checkRun npm install
